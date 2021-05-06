@@ -1,0 +1,66 @@
+@import 'variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Created variables for the main two colors I'll be using
+$red: #b51616;
+$green: #1b5236;
+
+// Mixin function for the body, and the image container
+//so it extends all the way in the screen
+@mixin noPadding () {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+//Calling the mixin
+#body, .col-md-10, #cont-img {
+  @include noPadding();
+}
+
+
+//Nesting inside the nav bar including itself and the link
+//of the li and its hover status
+.nav {
+  text-align: center;
+
+  li {
+    a {
+      color: white;
+    }
+    a:hover {
+      color: black;
+    }
+
+  }
+}
+
+#nav1 {
+  background-color: $green;
+}
+
+.col-md-2{
+  background-color: $red;
+}
+
+.dropdown-menu {
+  background-color: $green;
+}
+
+h1, h2 {
+  color: $red;
+}
+
+
+//some nesting here too
+footer {
+  background-color: $green;
+  height: 150px;
+  padding-top: 100px;
+
+  p {
+    color: white;
+  }
+}
