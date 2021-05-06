@@ -1,28 +1,26 @@
 @import 'variables';
-
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-
 // Created variables for the main two colors I'll be using
 $red: #b51616;
 $green: #1b5236;
-
 // Mixin function for the body, and the image container
 //so it extends all the way in the screen
 @mixin noPadding () {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 0;
 }
 
+@mixin yesPadding () {
+  padding: 20px;
+}
 //Calling the mixin
-#body, .col-md-10, #cont-img {
+#body,
+#cont-img,
+.col-md-10 {
   @include noPadding();
 }
-
-
 //Nesting inside the nav bar including itself and the link
 //of the li and its hover status
+
 .nav {
   text-align: center;
 
@@ -30,10 +28,10 @@ $green: #1b5236;
     a {
       color: white;
     }
+
     a:hover {
       color: black;
     }
-
   }
 }
 
@@ -41,7 +39,7 @@ $green: #1b5236;
   background-color: $green;
 }
 
-.col-md-2{
+.col-md-2 {
   background-color: $red;
 }
 
@@ -49,9 +47,58 @@ $green: #1b5236;
   background-color: $green;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: $red;
 }
+
+.carousel-item {
+  height: 500px;
+
+  img {
+    size: cover;
+  }
+}
+
+//editing the caption so it's easier to read and with a faded effect to soften
+//against the picture
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;;
+  box-shadow: 0 0 25px 20px rgba(0,0,0,.5);
+  border-radius: 20px;
+}
+
+#carouselExampleIndicators{
+  width: 80%;
+  background-color: #ebeced;
+  margin: auto;
+
+  @include yesPadding();
+
+  .carousel-inner {
+    .carousel-item {
+      height: 400px;
+
+    }
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: $red;
+  }
+  .carousel-control-prev-icon {
+    margin-left:-200px;
+  }
+  .carousel-control-next-icon {
+    margin-right:-200px
+  }
+
+}
+
+.flex-column {
+  text-align: center;
+}
+
 
 //some nesting here too
 footer {

@@ -7186,11 +7186,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-#body, .col-md-10, #cont-img {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px; }
+#body,
+#cont-img,
+.col-md-10 {
+  padding: 0; }
 
 .nav {
   text-align: center; }
@@ -7208,8 +7207,37 @@ a.text-dark:hover, a.text-dark:focus {
 .dropdown-menu {
   background-color: #1b5236; }
 
-h1, h2 {
+h1,
+h2 {
   color: #b51616; }
+
+.carousel-item {
+  height: 500px; }
+  .carousel-item img {
+    size: cover; }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 25px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px; }
+
+#carouselExampleIndicators {
+  width: 80%;
+  background-color: #ebeced;
+  margin: auto;
+  padding: 20px; }
+  #carouselExampleIndicators .carousel-inner .carousel-item {
+    height: 400px; }
+  #carouselExampleIndicators .carousel-control-prev-icon, #carouselExampleIndicators .carousel-control-next-icon {
+    background-color: #b51616; }
+  #carouselExampleIndicators .carousel-control-prev-icon {
+    margin-left: -200px; }
+  #carouselExampleIndicators .carousel-control-next-icon {
+    margin-right: -200px; }
+
+.flex-column {
+  text-align: center; }
 
 footer {
   background-color: #1b5236;
