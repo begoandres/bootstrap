@@ -41,7 +41,7 @@ $green: #1b5236;
   background-color: $green;
 }
 
-.col-md-2{
+header > .row > .col-md-2{
   background-color: $red;
 }
 
@@ -52,6 +52,39 @@ $green: #1b5236;
 h1, h2 {
   color: $red;
 }
+
+#main {
+  padding: 50px;
+
+}
+
+
+$bar-width: 50px;
+
+.progress {
+  margin: 25px;
+}
+
+//using interpolation
+.bg-success {
+  width: #{$bar-width};
+}
+
+//using extend to get the same properties
+.bg-info {
+  @extend .bg-success;
+}
+
+//using math operator to calculate the width
+.bg-warning {
+  width: 80px * 4;
+}
+
+.btn {
+  background-color: $green;
+  color: white;
+}
+
 
 
 //some nesting here too

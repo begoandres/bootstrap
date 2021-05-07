@@ -4725,12 +4725,14 @@ button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: #545b62 !important; }
 
-.bg-success {
+.bg-success, .bg-info {
   background-color: #28a745 !important; }
 
-a.bg-success:hover, a.bg-success:focus,
+a.bg-success:hover, a.bg-info:hover, a.bg-success:focus, a.bg-info:focus,
 button.bg-success:hover,
-button.bg-success:focus {
+button.bg-info:hover,
+button.bg-success:focus,
+button.bg-info:focus {
   background-color: #1e7e34 !important; }
 
 .bg-info {
@@ -7202,7 +7204,7 @@ a.text-dark:hover, a.text-dark:focus {
 #nav1 {
   background-color: #1b5236; }
 
-.col-md-2 {
+header > .row > .col-md-2 {
   background-color: #b51616; }
 
 .dropdown-menu {
@@ -7210,6 +7212,22 @@ a.text-dark:hover, a.text-dark:focus {
 
 h1, h2 {
   color: #b51616; }
+
+#main {
+  padding: 50px; }
+
+.progress {
+  margin: 25px; }
+
+.bg-success, .bg-info {
+  width: 50px; }
+
+.bg-warning {
+  width: 320px; }
+
+.btn {
+  background-color: #1b5236;
+  color: white; }
 
 footer {
   background-color: #1b5236;
